@@ -36,6 +36,18 @@ h6 {
     background: #ffffff;
 }
 
+.gen-text {
+    color: #3b8ede;
+   
+}
+.aspira-text {
+    color: #002d72;
+}
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+}
+
 section {
     scroll-margin-top: 60px;
 }
@@ -292,13 +304,16 @@ section {
 }
 
 /* Highlight gradient text */
-.highlight {
-    background: linear-gradient(90deg, #2563eb, #7c3aed);
+.hero-section .highlight {
+    background: linear-gradient(90deg, #00aaff, #002d72);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
+
+    /* stroke for contrast */
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
 }
 
 /* Buttons container */
@@ -908,13 +923,16 @@ section {
 
 /* Image zoom on hover */
 .mentor-img {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     border: 4px solid #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.4s ease;
+
+    object-fit: cover;
+    object-position: center 20%;
+    /* shift crop slightly down */
 }
 
 .mentor-card:hover .mentor-img {

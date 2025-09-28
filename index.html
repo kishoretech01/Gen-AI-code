@@ -146,7 +146,7 @@
   <section id="hero" class="hero-section d-flex align-items-center">
     <div class="container">
       <div class="row align-items-center">
-
+  
         <!-- Left Text -->
         <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0" data-aos="fade-right">
           <h1 class="display-4 fw-bold mb-4">
@@ -157,20 +157,25 @@
             Learn cutting-edge AI through hands-on projects, personalized mentorship,
             and expert sessions. Get job-ready in months, not years.
           </p>
+  
+          <!-- Buttons -->
           <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
-            <a href="Genaspira Brochure.pdf" class="btn-download">Download Course Plan</a>
+            <a id="downloadBtn" href="Genaspira Brochure.pdf" class="btn-download" style="display:none;">Download Course
+              Plan</a>
+            <button id="fillFormBtn" class="btn btn-primary">Fill Form to Download</button>
           </div>
         </div>
-
+  
         <!-- Right Image -->
         <div class="col-lg-6 text-center" data-aos="fade-left">
           <img
             src="https://cdn.media.amplience.net/i/epammarketplace/two-people-merging-into-ai-neural-network-circuits-blue-orange-tones-black-background?fmt=webp&w=900&q=100&v=371773116820"
             alt="AI Bootcamp" class="img-fluid hero-img rounded-4 shadow-lg" />
         </div>
-
+  
       </div>
     </div>
+  
     <!-- Animated Background -->
     <div class="particles">
       <span class="particle" style="left:10%; animation-delay:0s;"></span>
@@ -179,11 +184,38 @@
       <span class="particle" style="left:70%; animation-delay:6s;"></span>
       <span class="particle" style="left:90%; animation-delay:8s;"></span>
     </div>
-
+  
     <div class="hero-blob-bg"></div>
   </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const fillFormBtn = document.getElementById("fillFormBtn");
+    const downloadBtn = document.getElementById("downloadBtn");
+    const formLink = "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__p_okRhUOFZNRk1EVkFWT1FPTFpFN0JSOURDWkFZOS4u";
 
+    // Check if user already submitted
+    const submitted = localStorage.getItem("formSubmitted") === "true";
 
+    if (submitted) {
+      fillFormBtn.disabled = true;
+      fillFormBtn.innerText = "Form Already Submitted";
+      downloadBtn.style.display = "inline-block";
+    }
+
+    fillFormBtn.addEventListener("click", () => {
+      // Open Microsoft Form in new tab
+      window.open(formLink, "_blank");
+
+      // Mark as submitted
+      localStorage.setItem("formSubmitted", "true");
+      fillFormBtn.disabled = true;
+      fillFormBtn.innerText = "Form Already Submitted";
+      downloadBtn.style.display = "inline-block";
+    });
+  </script>
+  
+  
   <!-- Why Choose Section -->
   <section id="why" class="why-choose py-5 bg-light">
     <div class="container">

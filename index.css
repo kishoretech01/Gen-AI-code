@@ -159,7 +159,7 @@ section {
     justify-content: center;
     padding: 4rem 1.5rem 3rem;
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', 'Inter', sans-serif;
     color: #ffffff;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364, #00c6ff, #00ff87);
     background-size: 400% 400%;
@@ -936,7 +936,7 @@ section {
 /* 🪶 Mentor Card */
 .mentor-dynamic-card {
     background: #ffffff;
-    border-radius: 22px;
+    border-radius: 35px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
